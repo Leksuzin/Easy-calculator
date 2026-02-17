@@ -1,0 +1,55 @@
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    int a,b,choose;
+    std::cout<<"Hello! this is a simply calculator \n";
+    std::cout<<"Choose action: \n";
+    std::cout<<"1.Add \n";
+    std::cout<<"2.Substact \n";
+    std::cout<<"3.Multiple \n";
+    std::cout<<"4.Divide \n";
+    std::cout<<"5.Modulo \n";
+    std::cin>>choose;
+    std::cout<<"Choose number a: ";
+    std::cin>>a;
+    std::cout<<"Choose number b: ";
+    std::cin>>b;
+    if(std::cin.fail())
+    {
+        std::cout<<"Wrong number";
+        std::cin.clear();
+        std::cin.ignore(1000, '\n');
+        return 0;
+    }
+    switch (choose)
+    {
+    case 1:
+    std::cout<<"a + b = "<<a+b;
+    break;
+    case 2:
+    std::cout<<"a - b = "<<a-b;
+    break;
+    case 3:
+    std::cout<<"a * b = "<<a*b;
+    break;
+    case 4:
+    if(b!=0)
+    {
+        std::cout<<"ERROR!";
+    }
+    else
+{
+    std::cout << "a / b = " << a/b;
+}
+    break;
+    case 5:
+    std::cout<<"a % b = "<<a%b;
+    break;
+    default:
+    std::cout << "Wrong option";
+    break;
+    }
+    return 0;
+}
