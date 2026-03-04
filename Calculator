@@ -1,21 +1,23 @@
 #include <iostream>
 #include <cmath>
-
 int main()
 {
     int a,b,choose;
     std::cout<<"Hello! this is a simply calculator \n";
     std::cout<<"Choose action: \n";
+// Program show a few options to calculations
     std::cout<<"1.Add \n";
     std::cout<<"2.Subtract \n";
     std::cout<<"3.Multiple \n";
     std::cout<<"4.Divide \n";
     std::cout<<"5.Modulo \n";
+    std::cout<<"6.Exit \n";
     std::cin>>choose;
     std::cout<<"Choose number a: ";
     std::cin>>a;
     std::cout<<"Choose number b: ";
     std::cin>>b;
+// Check if the user input is valid
     if(std::cin.fail())
     {
         std::cout<<"Wrong number";
@@ -47,6 +49,9 @@ int main()
     case 5:
     std::cout<<"a % b = "<<a%b;
     break;
+    case 6:
+    std::cout<<"Exiting the calculator";
+    return 0;
     default:
     std::cout << "Wrong option";
     break;
